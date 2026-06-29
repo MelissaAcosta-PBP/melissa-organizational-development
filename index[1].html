@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melissa Acosta · OD, Talent Planning & Succession Portfolio</title>
+  <meta name="description" content="Organizational Development, Talent Planning, Succession, Role Architecture, Employee Listening, People Analytics, and Manager Enablement portfolio for Melissa Acosta, CPHR." />
+  <meta property="og:title" content="Melissa Acosta · Organizational Development Portfolio" />
+  <meta property="og:description" content="OD, talent planning, succession, competency frameworks, employee listening, analytics, and leadership enablement." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Palette matched to Melissa's original light teal portfolio screenshot. */
+    :root {
+      --bg: #edf6f5;
+      --bg-alt: #deefef;
+      --surface: #ffffff;
+      --surface-soft: rgba(255, 255, 255, 0.78);
+      --ink: #083e46;
+      --ink-2: #0f5f65;
+      --teal: #2f8785;
+      --teal-dark: #0a5960;
+      --teal-soft: #cbe4e2;
+      --teal-pale: #e8f4f3;
+      --line: #b7d3d1;
+      --line-soft: rgba(10, 89, 96, 0.16);
+      --muted: #4c7375;
+      --gold: #d8a24b;
+      --pink: #f5c8d2;
+      --blue: #bcdce6;
+      --green: #cde9d8;
+      --shadow: 0 28px 80px rgba(16, 77, 81, 0.13);
+      --radius-xl: 34px;
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --max: 1220px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      text-rendering: geometricPrecision;
+    }
+    a { color: inherit; text-decoration: none; }
+    .page-shell { overflow: hidden; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(237, 246, 245, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 6px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      min-height: 50px;
+    }
+    .brand {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.64rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--teal-dark);
+    }
+    .nav-links a {
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      transition: 160ms ease;
+    }
+    .nav-links a:hover { border-color: var(--teal); background: rgba(255,255,255,.5); }
+    .nav-links a.button-link { border-color: var(--teal); padding-inline: 16px; }
+
+    .hero-wrap {
+      position: relative;
+      min-height: calc(100vh - 50px);
+      isolation: isolate;
+    }
+    .hero-wrap::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      width: 49.7%;
+      height: 100%;
+      background:
+        radial-gradient(circle at 88% 12%, rgba(255,255,255,.68), transparent 18rem),
+        var(--bg-alt);
+    }
+    .hero {
+      max-width: var(--max);
+      margin: 0 auto;
+      min-height: calc(100vh - 50px);
+      display: grid;
+      grid-template-columns: 1.04fr .96fr;
+      align-items: center;
+      gap: 62px;
+      padding: 70px 38px 50px;
+    }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 26px;
+      color: var(--teal-dark);
+      font-size: .74rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .23em;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: var(--teal);
+      display: inline-block;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      margin: 0 0 18px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
+      line-height: .88;
+      font-size: clamp(5.2rem, 9vw, 8.3rem);
+      letter-spacing: -0.055em;
+      color: var(--ink);
+    }
+    h1 span {
+      display: block;
+      color: var(--teal);
+      font-style: italic;
+      letter-spacing: -0.045em;
+    }
+    .hero-role {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.28rem, 1.7vw, 1.68rem);
+      color: var(--teal-dark);
+      margin-bottom: 38px;
+      line-height: 1.25;
+    }
+    .hero-copy {
+      max-width: 520px;
+      font-size: .97rem;
+      color: var(--teal-dark);
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(90px,1fr));
+      max-width: 620px;
+      gap: 25px;
+      margin: 42px 0 36px;
+    }
+    .metric strong {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.85rem;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--teal);
+      letter-spacing: -.045em;
+    }
+    .metric span {
+      display: block;
+      margin-top: 6px;
+      font-size: .62rem;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      color: var(--teal-dark);
+      font-weight: 600;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 150px;
+      padding: 13px 22px;
+      background: var(--teal);
+      color: #fff;
+      border: 1px solid var(--teal);
+      border-radius: 0;
+      font-size: .72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      transition: 160ms ease;
+    }
+    .btn:hover { background: var(--teal-dark); border-color: var(--teal-dark); transform: translateY(-1px); }
+    .btn.secondary { background: transparent; color: var(--teal-dark); border-color: var(--line); }
+    .btn.secondary:hover { background: rgba(255,255,255,.54); }
+
+    .hero-card {
+      max-width: 860px;
+      margin-left: auto;
+      margin-top: 210px;
+      background: var(--surface);
+      border-radius: 5px;
+      box-shadow: var(--shadow);
+      padding: 46px 48px;
+    }
+    .card-kicker {
+      font-size: .64rem;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 20px;
+    }
+    .expertise-list {
+      display: grid;
+      gap: 22px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .expertise-item { display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start; }
+    .icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: var(--teal-soft);
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+    }
+    .expertise-item strong { display: block; font-size: .95rem; margin-bottom: 2px; color: #042d35; }
+    .expertise-item span { color: var(--teal-dark); font-size: .76rem; }
+
+    section { padding: 84px 38px; }
+    .section-inner { max-width: var(--max); margin: 0 auto; }
+    .section-head {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 34px;
+      margin-bottom: 36px;
+      align-items: start;
+    }
+    .section-number {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 3.5rem;
+      line-height: .85;
+      color: rgba(47, 135, 133, .24);
+    }
+    .section-label {
+      color: var(--teal-dark);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .68rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 500;
+      color: var(--ink);
+      font-size: clamp(2.6rem, 5vw, 5.2rem);
+      letter-spacing: -.05em;
+      line-height: .95;
+    }
+    h2 em { color: var(--teal); font-style: italic; }
+    .lead { max-width: 830px; color: var(--muted); font-size: 1rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .grid.two { grid-template-columns: repeat(2, 1fr); }
+    .project-card {
+      background: var(--surface-soft);
+      border: 1px solid var(--line-soft);
+      box-shadow: 0 12px 36px rgba(13, 72, 77, .08);
+      padding: 26px;
+      min-height: 100%;
+      transition: 180ms ease;
+    }
+    .project-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .project-card.featured { background: #fff; }
+    .tag {
+      display: inline-flex;
+      margin-bottom: 16px;
+      color: var(--teal);
+      font-size: .67rem;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-weight: 800;
+    }
+    h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.85rem;
+      line-height: 1.04;
+      letter-spacing: -.035em;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .project-card p { color: var(--muted); font-size: .92rem; margin-bottom: 16px; }
+    .card-metrics { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .mini-metric {
+      border: 1px solid var(--line);
+      background: var(--teal-pale);
+      padding: 8px 10px;
+      min-width: 82px;
+    }
+    .mini-metric strong { display: block; color: var(--teal); line-height: 1; font-size: 1.08rem; }
+    .mini-metric span { display: block; margin-top: 4px; font-size: .62rem; letter-spacing: .09em; text-transform: uppercase; color: var(--teal-dark); }
+
+    .band { background: linear-gradient(90deg, rgba(222,239,239,.78), rgba(237,246,245,1)); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+    .timeline { display: grid; gap: 16px; }
+    .role {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 28px;
+      background: rgba(255,255,255,.7);
+      border: 1px solid var(--line-soft);
+      padding: 26px;
+    }
+    .role .date { color: var(--teal); font-weight: 800; font-size: .76rem; text-transform: uppercase; letter-spacing: .12em; }
+    .role h3 { margin-bottom: 2px; }
+    .role .company { font-weight: 800; color: var(--teal-dark); margin-bottom: 8px; }
+    .role p { color: var(--muted); margin: 0; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      background: rgba(255,255,255,.62);
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      color: var(--teal-dark);
+      font-weight: 700;
+      font-size: .78rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 34px 38px;
+      color: var(--teal-dark);
+      font-size: .82rem;
+      text-align: center;
+      background: #eaf4f3;
+    }
+
+    @media (max-width: 980px) {
+      .nav-inner { align-items: flex-start; flex-direction: column; padding: 14px 18px; }
+      .hero-wrap::after { width: 100%; opacity: .6; }
+      .hero { grid-template-columns: 1fr; padding-top: 54px; gap: 34px; }
+      .hero-card { margin-top: 0; margin-left: 0; }
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .grid, .grid.two { grid-template-columns: 1fr; }
+      .role { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      h1 { font-size: 4.5rem; }
+      section { padding: 62px 20px; }
+      .hero { padding-left: 20px; padding-right: 20px; }
+      .section-head { grid-template-columns: 1fr; gap: 10px; }
+      .hero-card { padding: 30px 24px; }
+      .nav-links { gap: 2px; }
+      .nav-links a { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-shell">
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#top" class="brand">Melissa Acosta</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#succession">Succession</a>
+        <a href="#architecture">Job Architecture</a>
+        <a href="#analytics">Analytics</a>
+        <a href="#listening">Listening</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Credentials</a>
+        <a class="button-link" href="https://www.linkedin.com/in/melissa-acosta-cphr/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-wrap" id="top">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Organizational Development Portfolio</div>
+        <h1>Melissa <span>Acosta</span></h1>
+        <div class="hero-role">Talent Planning, Succession & Organizational Development Leader · CPHR</div>
+        <p class="hero-copy">I build integrated talent systems that connect competency frameworks, performance data, calibration, leadership development, internal mobility, and people analytics into practical decision tools for leaders.</p>
+        <div class="metrics" aria-label="Portfolio metrics">
+          <div class="metric"><strong>11+</strong><span>Years Experience</span></div>
+          <div class="metric"><strong>9</strong><span>Countries</span></div>
+          <div class="metric"><strong>448</strong><span>Employees in Platform</span></div>
+          <div class="metric"><strong>459</strong><span>Roles Standardized</span></div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#succession">View OD Work</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/melissa-acosta-cphr/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Background and expertise">
+        <div class="card-kicker">Background & Expertise</div>
+        <ul class="expertise-list">
+          <li class="expertise-item"><span class="icon">🎯</span><div><strong>Talent Planning & Succession</strong><span>Calibration · readiness categories · leadership pipeline</span></div></li>
+          <li class="expertise-item"><span class="icon">🧩</span><div><strong>Organizational Development</strong><span>Competency frameworks · role architecture · change enablement</span></div></li>
+          <li class="expertise-item"><span class="icon">📊</span><div><strong>People & Workforce Analytics</strong><span>Dashboards · longitudinal listening · board-ready reporting</span></div></li>
+          <li class="expertise-item"><span class="icon">🌎</span><div><strong>Canada & Latin America</strong><span>Multi-province HR · multi-country talent systems</span></div></li>
+          <li class="expertise-item"><span class="icon">🧠</span><div><strong>CPHR · I/O Psychology Background</strong><span>DISC · psychometric assessment · leadership development</span></div></li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-number">00</div>
+        <div>
+          <div class="section-label">About This Work</div>
+          <h2>OD, Talent Planning <em>& People Systems</em></h2>
+          <p class="lead">This portfolio focuses only on Organizational Development, Talent Planning, Succession, Role Architecture, Employee Listening, People Analytics, and Manager Enablement. The work spans lean nonprofit environments, multinational technology, and large social services organizations.</p>
+        </div>
+      </div>
+      <div class="chips">
+        <span class="chip">CPHR</span><span class="chip">I/O Psychology</span><span class="chip">Talent & Succession</span><span class="chip">People Analytics</span><span class="chip">DISC Practitioner</span><span class="chip">LEGO Serious Play</span><span class="chip">Competency Frameworks</span><span class="chip">HRBP Enablement</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="succession" class="band">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-number">01</div>
+        <div>
+          <div class="section-label">Talent Planning & Succession</div>
+          <h2>Leadership Pipeline <em>& Readiness</em></h2>
+          <p class="lead">Projects connecting performance data, calibration, readiness categories, internal mobility, technical certification, and leadership development.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="project-card featured">
+          <span class="tag">Featured · Platform</span>
+          <h3>Pandora / Goal Tracker</h3>
+          <p>Led OD and people process design for a regional performance, calibration, and succession platform connecting goals, competency indicators, readiness categories, calibration discussions, and succession planning data.</p>
+          <div class="card-metrics"><div class="mini-metric"><strong>448</strong><span>Employees</span></div><div class="mini-metric"><strong>9</strong><span>Countries</span></div></div>
+        </article>
+        <article class="project-card featured">
+          <span class="tag">Featured · Technical Pipeline</span>
+          <h3>IFX Hack Bootcamp</h3>
+          <p>Designed a technical succession and capability-building program for selected employees in Cloud, IT, C.A.R.E., infrastructure, SAP, Oracle, IBM Power, NetBackup, and related specialist areas.</p>
+          <div class="card-metrics"><div class="mini-metric"><strong>154</strong><span>Selected</span></div><div class="mini-metric"><strong>Critical</strong><span>Roles</span></div></div>
+        </article>
+        <article class="project-card featured">
+          <span class="tag">Featured · Career Pathways</span>
+          <h3>Beta to Legend Journey</h3>
+          <p>Created a regional certification and career progression roadmap connecting technical certifications, role requirements, career levels, incentives, salary progression, promotion readiness, and succession planning.</p>
+          <div class="card-metrics"><div class="mini-metric"><strong>5</strong><span>Levels</span></div><div class="mini-metric"><strong>42</strong><span>Promotions Tracked</span></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="architecture">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-number">02</div>
+        <div>
+          <div class="section-label">Job Architecture & Role Design</div>
+          <h2>Role Clarity <em>at Scale</em></h2>
+          <p class="lead">Role standardization, job architecture, competency frameworks, skills taxonomy, salary bands, and workforce planning foundations.</p>
+        </div>
+      </div>
+      <div class="grid two">
+        <article class="project-card">
+          <span class="tag">IFX Networks</span>
+          <h3>Regional Role Modernization</h3>
+          <p>Modernized 157 roles across 14 departments and 9 countries using PwC methodology, integrating competency frameworks, salary bands, skills taxonomy, career pathways, workforce planning, and succession foundations.</p>
+          <div class="card-metrics"><div class="mini-metric"><strong>157</strong><span>Roles</span></div><div class="mini-metric"><strong>14</strong><span>Departments</span></div><div class="mini-metric"><strong>9</strong><span>Countries</span></div></div>
+        </article>
+        <article class="project-card">
+          <span class="tag">Colsubsidio</span>
+          <h3>Enterprise Role Standardization</h3>
+          <p>Standardized job descriptions across a 15,000-employee organization, strengthening role clarity, workforce planning, recruitment alignment, competency consistency, and enterprise talent infrastructure.</p>
+          <div class="card-metrics"><div class="mini-metric"><strong>459</strong><span>Roles</span></div><div class="mini-metric"><strong>35</strong><span>Departments</span></div><div class="mini-metric"><strong>15K</strong><span>Employees</span></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="analytics" class="band">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-number">03</div>
+        <div>
+          <div class="section-label">People Analytics</div>
+          <h2>Decision Tools <em>for Leaders</em></h2>
+          <p class="lead">Dashboards and analytics models translating workforce, compensation, PTO, and organizational health data into actionable leadership decisions.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="project-card"><span class="tag">Code for Canada</span><h3>Multi-Year Compensation & Workforce Analytics Model</h3><p>Built a model capturing salary movement, tenure, job level, province, competency sublevels, turnover, retention, promotions, and development usage to support CEO and board-level workforce questions.</p></article>
+        <article class="project-card"><span class="tag">Burnout Risk</span><h3>PTO & Burnout Risk Dashboard</h3><p>Created an employee-level risk view with PTO usage, zero-vacation flags, workload sustainability signals, and manager action priorities to support healthier capacity planning.</p></article>
+        <article class="project-card"><span class="tag">Talent Data</span><h3>Promotion & Mobility Insights</h3><p>Analyzed internal mobility and promotion data, including 42 promotions in Colombia in 2020, to inform career pathway design, development priorities, and pipeline conversations.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="listening">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-number">04</div>
+        <div>
+          <div class="section-label">Employee Listening</div>
+          <h2>Organizational Health <em>Reporting</em></h2>
+          <p class="lead">Longitudinal listening architecture connecting engagement, psychological safety, leadership effectiveness, workload, benefits, rewards, OH&S, and employee experience.</p>
+        </div>
+      </div>
+      <div class="grid two">
+        <article class="project-card"><span class="tag">Longitudinal Listening</span><h3>8–10 Wave Listening Architecture</h3><p>Aggregated results at construct level across multiple survey waves to identify trends and convert shifting questions into stable organizational health themes.</p><div class="card-metrics"><div class="mini-metric"><strong>8–10</strong><span>Waves</span></div><div class="mini-metric"><strong>15Five</strong><span>Survey Data</span></div></div></article>
+        <article class="project-card"><span class="tag">Manager Enablement</span><h3>Leadership Reports & Action Planning</h3><p>Translated listening insights into leadership reports and manager action-planning resources that informed benefits and rewards strategy, leadership development, psychological safety, and OH&S priorities.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="leadership" class="band">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-number">05</div>
+        <div>
+          <div class="section-label">Leadership Development</div>
+          <h2>Manager Capability <em>& Feedback</em></h2>
+          <p class="lead">Leadership school, feedback role plays, DISC insights, team development days, and practical enablement resources aligned to competency frameworks.</p>
+        </div>
+      </div>
+      <div class="grid two">
+        <article class="project-card"><span class="tag">IFX Networks</span><h3>Regional Leadership School</h3><p>Created and delivered a leadership school for managers and senior leaders using role plays, feedback scenarios, DISC insights, competency-based coaching tools, and practical guides.</p><div class="card-metrics"><div class="mini-metric"><strong>77</strong><span>Leaders</span></div><div class="mini-metric"><strong>VP/CFO</strong><span>Level</span></div></div></article>
+        <article class="project-card"><span class="tag">Rétate DNA</span><h3>Team Building & Development Days</h3><p>Designed and facilitated annual two-week development days as pipeline interventions aligned to the Rétate DNA framework, strengthening collaboration, adaptability, innovation, communication, and leadership readiness.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-number">06</div>
+        <div><div class="section-label">Career Experience</div><h2>Work <em>History</em></h2></div>
+      </div>
+      <div class="timeline">
+        <article class="role"><div class="date">2022–2026</div><div><h3>People & Culture Business Partner</h3><div class="company">Code for Canada · Canada</div><p>National civic technology nonprofit. Built employee listening, organizational health reporting, competency frameworks, manager enablement resources, workforce analytics, compensation models, and HRIS workflows across a distributed workforce.</p></div></article>
+        <article class="role"><div class="date">2021–2022</div><div><h3>HR & Recruitment Coordinator</h3><div class="company">Immigrant Services Calgary · Calgary, AB</div><p>Community nonprofit supporting newcomers and refugees. Built HR data audits, Dayforce data quality processes, onboarding surveys, recruitment tracking, and performance management documentation.</p></div></article>
+        <article class="role"><div class="date">2018–2021</div><div><h3>Talent Acquisition & Organizational Development Lead</h3><div class="company">IFX Networks · Latin America</div><p>Multinational technology company. Designed talent management ecosystems, succession pipelines, role modernization, competency frameworks, Pandora / Goal Tracker, technical career pathways, leadership school, and pipeline interventions across 9 countries.</p></div></article>
+        <article class="role"><div class="date">2017–2018</div><div><h3>Planning & Organizational Design Analyst</h3><div class="company">Colsubsidio · Colombia</div><p>Large social services and compensation fund organization. Standardized 459 roles across 35 departments in a 15,000-employee environment, strengthening role clarity, workforce planning, job architecture, and talent infrastructure.</p></div></article>
+        <article class="role"><div class="date">2015–2017</div><div><h3>HR & Organizational Development Consultant</h3><div class="company">Various Clients · Colombia</div><p>Delivered HR, organizational development, job description, competency-based interview, performance tool, policy, employee communication, and leadership development consulting.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials" class="band">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-number">07</div>
+        <div><div class="section-label">Credentials & Tools</div><h2>Expertise <em>Stack</em></h2></div>
+      </div>
+      <div class="grid two">
+        <article class="project-card"><span class="tag">Credentials</span><h3>Education & Professional Development</h3><p>CPHR · BSc Psychology / I-O Psychology · Postgraduate Diploma in HR · People Analytics · Talent Management & Succession Planning · Organizational Development · Performance Management · Coaching at Scale · DEIB · Digital HR · AI for HR · DISC Practitioner · LEGO Serious Play.</p></article>
+        <article class="project-card"><span class="tag">Systems & Methods</span><h3>Tools and OD Methods</h3><p>Rippling · Dayforce · PowerPay · 15Five · Looker Studio · Google Sheets · Power BI · Tableau · Notion · ClickUp · Miro · Mural · 9-Box · 4-Box · competency frameworks · job architecture · calibration · readiness categories · development planning · employee listening.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Melissa Acosta · CPHR · Organizational Development, Talent Planning & Succession Portfolio · Canada · <a href="https://www.linkedin.com/in/melissa-acosta-cphr/" target="_blank" rel="noopener">LinkedIn</a>
+  </footer>
+</div>
+</body>
+</html>
